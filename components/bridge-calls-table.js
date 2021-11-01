@@ -48,8 +48,11 @@ export default function BridgeCallsTable({ decodedBridgeCalls }) {
                       <b>{bridgeCall.functionName}</b>(<br />
                         {bridgeCall.args && bridgeCall.args.map((arg) => {
                           return <div className="pl-3 ">
-                            <i>{arg.name}:</i>  
-                            {/* {JSON.stringify(arg.value)} */}
+                            <i>{arg.name}: </i>  
+                            {Array.isArray(arg.value) && <> [<br />
+                              {arg.value.map(v => <div className="pl-3">{v},<br /></div>)}
+                            ] </>}
+                            {!Array.isArray(arg.value) && arg.value}
                             <br />
                           </div>;
                         })}

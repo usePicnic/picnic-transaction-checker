@@ -30,7 +30,7 @@ export default function Home() {
 
         <TransactionDataInput transactionData={transactionData} setTransactionData={setTransactionData} decodedTransactionData={decodedTransactionData} />
 
-        {decodedTransactionData && decodedTransactionData.name}
+        {decodedTransactionData && <div>Function call: <b>{decodedTransactionData.name}</b></div>}
 
         {decodedTransactionData && <BridgeCallsTable
           decodedBridgeCalls={decodedTransactionData.decodedBridgeCalls}
