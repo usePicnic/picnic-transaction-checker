@@ -11,26 +11,26 @@ const decodeBridgeCalls = (bridgeAddresses, bridgeEncodedCalls) => {
   const bridges = [
     {
       name: 'AaveV2DepositBridge',
-      address: '0x1F2c6621bE5e72e0da454337EF52e7e819F3EEe9',
+      address: '0x29494C1673903e608352020CF8F545af70111Ad4',
       abi: AaveV2DepositBridge.abi,
     },
     {
       name: 'QuickswapSwapBridge',
-      address: '0x6d5BD4Fdb0bAeD81F44795D32EAd78C3922BA930',
+      address: '0xFA299c3f1eE9DEA789b1d94243Ab7AEeA8BD7C77',
       abi: QuickswapSwapBridge.abi,
     },
     {
-      address: '0x824314A675928B429845EF4219F62E1eA6C1b043',
+      address: '0x89Db516B50819593f058040F781BfF9880ca81a8',
       name: 'QuickswapLiquidityBridge',
       abi: QuickswapLiquidityBridge.abi,
     },
     {
-      address: '0x788bFcDEf296F44fEe92390E7268d8DaC1c4ff98',
+      address: '0x4789499ed6D3c9E9b874E7E02AB8139779A51704',
       name: 'AutofarmDepositBridge',
       abi: AutofarmDepositBridge.abi,
     },
     {
-      address: '0x6E2b5a261ccfCEE64565C74d7F113658015066f9',
+      address: '0x9bA04eDb13e129c19823a084c7E9988FA5e20647',
       name: 'WMaticWrapBridge',
       abi: WMaticWrapBridge.abi,
     },
