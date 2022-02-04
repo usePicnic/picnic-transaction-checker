@@ -5,6 +5,7 @@ import * as AutofarmDepositBridge from './contracts/bridges/AutofarmDepositBridg
 import * as QuickswapLiquidityBridge from './contracts/bridges/QuickswapLiquidityBridge.json';
 import * as QuickswapSwapBridge from './contracts/bridges/QuickswapSwapBridge.json';
 import * as WMaticWrapBridge from './contracts/bridges/WMaticWrapBridge.json';
+import * as BalancerLiquidityBridge from './contracts/bridges/BalancerLiquidityBridge.json';
 import { BigNumber } from "@ethersproject/bignumber";
 
 const decodeBridgeCalls = (bridgeAddresses, bridgeEncodedCalls) => {
@@ -33,6 +34,11 @@ const decodeBridgeCalls = (bridgeAddresses, bridgeEncodedCalls) => {
       address: '0x9bA04eDb13e129c19823a084c7E9988FA5e20647',
       name: 'WMaticWrapBridge',
       abi: WMaticWrapBridge.abi,
+    },
+    {
+      address: '0x485834c8237FB22D891719143612d0fd6882C27b',
+      name: 'BalancerLiquidityBridge',
+      abi: BalancerLiquidityBridge.abi,
     },
   ]
 
