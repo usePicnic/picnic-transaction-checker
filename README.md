@@ -1,29 +1,18 @@
-# Next.js + Tailwind CSS Example
+# DeFi Basket Transaction Decoder
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+To further protect our users, we have created an open source verifier for the transactions. This provides an extra layer of security for users and enables the protocol to remain permissionless and decentralized by design. It allows a user to ensure all interactions only occur with trusted and audited bridges. An online version of the checker is available at <https://defibasket.github.io/checker/>, but it is recommended to run it locally for maximum protection.
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
+## Local setup
 
-## Preview
+Run:
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
-
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+1. `git clone https://github.com/defibasket/defibasket-transaction-checker.git`
+2. `yarn`
+3. `yarn build`
+4. `yarn start`
 
 ## How to use
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+1. Paste your transaction data in the input box.
+2. All valid transactions to trusted bridged will be shown with a check icon.
+3. In case a transaction is not valid, please contact us in [Discord](https://discord.gg/aWVWytFF) immediately.
