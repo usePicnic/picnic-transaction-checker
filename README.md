@@ -14,5 +14,6 @@ Run:
 ## How to use
 
 1. Paste your transaction data in the input box.
-2. All valid transactions to trusted bridged will be shown with a check icon.
-3. In case a transaction is not valid, please contact us in [Discord](https://discord.gg/aWVWytFF) immediately.
+2. All valid transactions to trusted bridged will be shown with a check icon ![check](https://user-images.githubusercontent.com/2355491/152592398-963ac8a2-70e3-4ceb-baa3-d358e5d7c29d.svg)
+3. In case a transaction is not valid ![alert](https://user-images.githubusercontent.com/2355491/152592472-7165124b-cf5e-4f45-9e6a-8020a34ebeda.svg)
+, please contact us in [Discord](https://discord.gg/aWVWytFF) immediately.
