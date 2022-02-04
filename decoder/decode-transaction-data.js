@@ -1,5 +1,5 @@
 import { Contract } from '@ethersproject/contracts';
-import * as IndexPool from './contracts/IndexPool.json';
+import * as DeFiBasket from './contracts/DeFiBasket.json';
 import * as AaveV2DepositBridge from './contracts/bridges/AaveV2DepositBridge.json';
 import * as AutofarmDepositBridge from './contracts/bridges/AutofarmDepositBridge.json';
 import * as QuickswapLiquidityBridge from './contracts/bridges/QuickswapLiquidityBridge.json';
@@ -107,25 +107,25 @@ const decodeBridgeCalls = (bridgeAddresses, bridgeEncodedCalls) => {
 
 
 const decodeTransactionData = (transactionData) => {
-  const indexpoolContract = new Contract(
-    '0x3ef849C414AE8f2ADD46ff80cF6904f4Da4ef1b9',
-    IndexPool.abi,
+  const DeFiBasketContract = new Contract(
+    '0xee13C86EE4eb1EC3a05E2cc3AB70576F31666b3b',
+    DeFiBasket.abi,
     undefined,
   );
   try {
-    const decodedIndexpoolData = indexpoolContract.interface.parseTransaction(
+    const decodedDeFiBasketData = DeFiBasketContract.interface.parseTransaction(
       { data: transactionData },
     );
 
-    const name = decodedIndexpoolData.name;
-    const { bridgeAddresses, bridgeEncodedCalls } = decodedIndexpoolData.args;
+    const name = decodedDeFiBasketData.name;
+    const { bridgeAddresses, bridgeEncodedCalls } = decodedDeFiBasketData.args;
 
     if (!(['createPortfolio', 'depositPortfolio', 'editPortfolio', 'withdrawPortfolio'].includes(name))) {
       return null;
     }
 
     return {
-      name: decodedIndexpoolData.name,
+      name: decodedDeFiBasketData.name,
       decodedBridgeCalls: decodeBridgeCalls(bridgeAddresses, bridgeEncodedCalls)
     };
   } catch (e) {
